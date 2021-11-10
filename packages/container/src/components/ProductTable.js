@@ -1,4 +1,4 @@
-import { mount } from 'markets/MarketingApp';
+import { mount } from 'products/ProductTable';
 import React, { useRef, useEffect } from 'react';
 
 export default () => {

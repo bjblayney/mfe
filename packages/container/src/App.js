@@ -1,12 +1,17 @@
-import React from 'react';
-import MarketingApp from './components/MarketingApp';
+import React, { Suspense } from 'react';
+// import MarketingApp from './components/MarketingApp';
+// import ProductTable from './components/ProductTable';
+const ProductTable = React.lazy(() => import('./components/ProductTable'));
 
 export default () => {
   return (
     <div>
-      <h1>Hi There! Updated. And Another. Push.</h1>
+      <h1>Hello from container.</h1>
       <hr />
-      <MarketingApp />
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <ProductTable />
+      </Suspense>
     </div>
   );
 };
